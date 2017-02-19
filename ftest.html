@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <style>
+      #container{
+        font-family:monospace;
+        font-weight:bold;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="container"></div>
+
+    <script>
+
+
+
+//get number, return fibonnaci sequence
+// fnum = fnum(-2) + fnum(-1)
+    function fibonnaci(num){
+      var arri = [0,1];
+      var z = 0;
+      for (var i = 2; i++; i < num)
+      {
+          z = arri[i-2] + arri[i-1];
+          arri.push(z);
+      }
+      return arri; WA 
+    };
+
+    console.log(fibonnaci(10));
+
+
+      $("#container").text("Hello World fibonnaci(10)" + fibonnaci(10));
+    </script>
+
+  </body>
+</html>

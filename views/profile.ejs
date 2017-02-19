@@ -1,0 +1,35 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/iplookup.js"/>
+</head>
+<body>
+  <div class="introboxtop"></div>
+    <div class="page-header text-center">
+        <h1>WELCOME <%= user.local.email %></h1>
+    </div>
+
+    <!-- Added functions below !-->
+    <div class="mainbox">
+
+    </div>
+        <!-- LOCAL INFORMATION -->
+
+          <div class= "infobox">
+          <h3><span class="fa fa-user"></span> User Info</h3>
+              <p>
+                  <strong>id</strong>: <%= user._id %><br>
+                  <strong>email</strong>: <%= user.local.email %><br>
+                  <strong>password</strong>: <%= user.local.password %>
+              </p>
+          </div>
+          <div class="bottombar">
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+          </div>
+</body>
+</html>
